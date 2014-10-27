@@ -1,58 +1,158 @@
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		    <title> MaHua 在线markdown编辑器</title>
-    		<meta name="keywords" content="online markdown editor,markdown编辑器,在线编辑markdown" />
-    		<meta name="description" content="MaHua是一个在线编辑markdown的工具" />
-   		 <meta name="COPYRIGHT" content="版权所有2012,http://MaHua.jser.me/">
-		<link rel="stylesheet" href="./reveal.js/css/reveal.min.css">
-		<link href="mahua.css?v=3" rel="stylesheet" type="text/css" />
-    		<link rel="shortcut icon" href="favicon.png" type="image/vnd.microsoft.icon" />
-    		    <style type="text/css">
-		            div#container{width:100%}
-		            div#header {background-color:#99bbbb;}
-		            div#E {background-color:#ffff99;height:50%;width:50%;float:right;}
-		            div#L {background-color:#6ba45a;height:80%;width:30%;float:left;}
-		            div#content {background-color:#EEEEEE;height:60%;width:70%;float:right;}
-		    </style>
-	</head>
-	<body>
-	<div id="E">
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Barebones Presentation</h2>
-					<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
-				</section>
-				<section>
-				<div  class="mahua-right" id="mahua-result"> </div>
-				</section>
-				<section>
-					<h2>No Theme</h2>
-					<p>There's no theme included, so it will fall back on browser defaults.</p>
-				</section>
-			</div>
-		</div>
-	</div>
-		<div class="mahua-container">
-		<div class="mahua-spliter" id="mahua-spliter"></div>
-       			 <div class="mahua-left">
-       			     <div id="mahua-editor" style="height:100%;width:50%;"></div>
-      			  </div>
-      			  <div class="mahua-right" id="mahua-result"> </div>
-      		</div>
-		<script src="./reveal.js/js/reveal.min.js"></script>
-		<script>Reveal.initialize();</script>
-		<script type="text/javascript" src="ace/ace.js"></script>
-	    	<script type="text/javascript" src="ace/keybinding-vim.js"></script>
-   	 	<script type="text/javascript" src="all.js?v=5"></script>
-   	 	    <script type="text/javascript">
-		        (function() {
-		        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'hm.baidu.com/h.js?f628d86243daf05c564aa17f55e27b02'; 
-		        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
-		        })();
-		    </script>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="./reveal.js/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+    </head>
+    <div class="reveal">
+
+      <div class="slides">
+
+
+                <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+                <!-- <section data-markdown="example.md" data-separator="^\n\n\n" data-vertical="^\n\n"></section> -->
+
+                <!-- Slides are separated by three dashes (quick 'n dirty regular expression) -->
+<!--                 <section data-markdown data-separator="---">
+
+                    <script type="text/template">
+                        ## Demo 1
+                        Slide 1
+                        ---
+                        ## Demo 1
+                        Slide 2
+                        ---
+                        ## Demo 1
+                        Slide 3
+                    </script>
+                </section> -->
+
+                <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
+                <section data-markdown data-separator="^\n---\n$" data-vertical="^\n--\n$">
+                    <script type="text/template">
+                        ## 进出口及加工贸易简介 
+
+                        ---
+
+                        ##  进出口
+
+                        --
+
+                        * 一般指进出口（国家（地区）之间的贸易往来），其他释义请点击此处。
+
+                        --
+
+                        * 国家与国家之间的贸易往来，进为购入，出为外销，进口和出口的综合。
+
+                        --
+
+                        * 进出口贸易是在一定的历史条件下产生和发展起来的。形成进出口贸易的两个基本条件，一是社会生产力的发展导致可供交换的剩余产品的出现；二是国家的形成。社会生产力的发展产生出用于交换的剩余商品，这些剩余商品在国与国之间交换，就产生了国际间的进出口贸易。一般指进出口（国家（地区）之间的贸易往来），其他释义请点击此处。
+
+                        --
+
+                        * 目前进出口，可用于收外币时的交易和需要海关参与的贸易当中。
+
+                        ---
+
+                        ## 进出口分类
+
+                        --
+
+                        ### 一般贸易
+                        * 一般贸易是指中国境内有进出口经营权的企业单边进口或单边出口的贸易，
+                        * 按一般贸易交易方式进出口的货物即为一般贸易货物。
+                        * 一般贸易货物在进口时可以按一般进出口监管制度办理海关手续，这时它就是一般进出口货物；
+                        * 也可以享受特定减免税优惠，按特定减免税监管制度办理海关手续，这时它就是特定减免税货物；
+                        * 也可以经海关批准保税，按保税监管制度办理海关手续，这时它就是保税货物。
+
+                        --
+
+                        ### 加工贸易
+
+                        --
+
+                        * 《中华人民共和国海关对加工贸易货物监管办法》（海关总署令第113号)
+                            * 规定 
+
+                            ---
+                            
+                                >加工贸易，是指经营企业进口全部或者部分原辅材料、零部件、元器件、包装物料（以下简称料件），经加工或装配后，将制成品复出口的经营活动，包括进料加工、来料加工、装配业务和协作生产。
+                            
+                            ---
+
+                                ###主要分类
+
+                                --
+
+                                * 进料加工
+
+                                --
+
+                                * 来料加工
+
+                                --
+                                
+                                * 装配业务协作生产
+
+                        --
+
+                        ###进料加工 
+
+                        --
+
+                        * 又叫以进养出
+
+                        ---
+
+                            >**指用外汇购入国外的原材料、辅料，利用本国的技术、设备和劳力，加工成成品后，销往国外市场。**
+                        
+                        ---
+                        
+                        * 这类业务中 
+                            >经营的企业以买主的身份与国外签订购买原材料的合同，又以卖主的身份签订成品的出口合同。两个合同体现为两笔交易，它们都是以所有权转移为特征的货物买卖。进料加工贸易要注意所加工的成品在国际市场上要有销路。
+                        
+                        ---
+
+                        * 否则
+                            >进口原料外汇很难平衡，从这一点看进料加工要承担价格风险和成品的销售风险。
+                            * **如：18R正式报关、外销产品。**
+
+                        ---
+
+                        ##进出口分类
+
+                        --
+
+                        * 临时进出境
+                              暂时进出境货物是指经海关批准，暂时进出关境并且在规定的期限内复运出境、进境的货物。
+                            **如：18R正式报关。**
+                    </script>
+                </section>
+            </div>
+    </div>
+    <script src="./reveal.js/lib/js/head.min.js"></script>
+    <script src="./reveal.js/js/reveal.js"></script>
+
+    <script>
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: './reveal.js/plugin/notes/notes.js' }
+        ]
+      });
+
+    </script>
 </html>
